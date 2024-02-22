@@ -44,8 +44,8 @@
   border-radius: 16px;
   padding: 0.5rem 1.8rem;
   background-color: white;
-  border: 1px rgb(111, 0, 0) solid;
-  color: rgb(111, 0, 0);
+  border: 1px #2d65c5 solid;
+  color: #2d65c5;;
   margin-left: 420px;
   font-weight: bold;
   margin-bottom: 2rem;
@@ -55,14 +55,14 @@
 .btnClose:active,
 .btnOrder:hover,
 .btnOrder:active {
-  background-color: #431400;
+  background-color: #032a6f;
 }
 
 .btnOrder {
   border-radius: 16px;
   padding: 0.5rem 1.8rem;
-  background-color: rgb(111, 0, 0);
-  border: 1px rgb(111, 0, 0) solid;
+  background-color: #2d65c5;
+  border: 1px #2d65c5 solid;
   color: white;
   margin-left: 10px;
   margin-bottom: 2rem;

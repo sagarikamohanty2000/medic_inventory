@@ -4,7 +4,6 @@ import MedicForm from "./Components/Medicine/MedicForm";
 import CartCheckout from "./Components/Cart/CartCheckout";
 import MedicList from "./Components/Medicine/MedicList";
 import ContextProvide from "./Store/ContextProvider";
-import MedicListContext from "./Store/MedicListContext";
 import "./App.css";
 
 function App() {

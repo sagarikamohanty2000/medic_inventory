@@ -10,7 +10,7 @@ const MedicAddForm = (props) => {
 
   return (
     <form onSubmit={submitFormHandler}>
-        <button type="submit" id={classes.Addbtn}>
+       <button type="submit" id={classes.AddBtn} disabled = {props.disable}>
           + Add
         </button>
     </form>

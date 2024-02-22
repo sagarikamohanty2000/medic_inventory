@@ -7,20 +7,24 @@ import CartModalItem from "./CartModalItem";
 const CartCheckout = (props) => {
   const contextApi = useContext(ContextApi);
 
-  const totalAmt = cartContext.totalAmount.toFixed(2);
+  const totalAmt = contextApi.totalAmount.toFixed(2);
 
   const removeCartItem = (id) => {
-    cartContext.removeItem(id);
+    contextApi.removeItem(id);
   };
 
   const addCartItem = (item) => {
+    if(item.qty > 1){
     contextApi.addItem({...item,amount: 1});
+   
+    console.log('cartItem',item);
     contextApi.removeQty(item.id);
+    }
   };
 
   const cartItem = (
     <ul className={classes.itemDetails}>
-      {cartContext.items.map((item) => (
+      {contextApi.items.map((item) => (
         <CartModalItem
           key={item.id}
           name={item.name}

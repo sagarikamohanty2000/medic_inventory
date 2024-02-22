@@ -1,0 +1,36 @@
+.list-frame {
+    padding-top: 20px;
+    border-bottom: 1px solid  #032a6f;;
+    margin-right: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .medic-name {
+    display: flex;
+    justify-content: space-between;
+    font-size: larger;
+    font-weight: bold;
+  }
+  
+  .des {
+    font-style: italic;
+  }
+  
+  .price {
+    font-size: larger;
+    font-weight: bold;
+    color: rgb(4, 79, 155);
+    margin-bottom: 1.5rem;
+  }
+
+  .qty {
+    position: relative;
+    left: 1220px;
+  }
+  
+  .outOfStock{
+     color: Balck;
+     position: relative;
+     left: 1230px;
+  }
