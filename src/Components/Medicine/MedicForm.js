@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useContext } from "react";
 import Card from '../UI/Card';
-
+import ContextApi from '../../Store/ContextApi';
 import classes from './MedicForm.module.css';
 
 const MedicForm = (props) => {
+  const conextApi = useContext(ContextApi);
   const [medicName, setMedicName] = useState("");
   const [descrip, setDescrip] = useState("");
   const [price, setPrice] = useState("");
@@ -25,15 +26,17 @@ const MedicForm = (props) => {
     setQtyAvail(event.target.value);
   };
 
-  const onSubmitHandler = () => {
+  const onSubmitHandler = (event) => {
+    event.preventDefault();
     const medicDetail = {
+      id:Math.random(),
       name: medicName,
       des: descrip,
       price: price,
       qty: qtyAvail,
     };
 
-    props.getMedicDetail(medicDetail);
+    conextApi.addMedicItem(medicDetail);
     setMedicName("");
     setDescrip("");
     setPrice("");
@@ -67,7 +70,7 @@ const MedicForm = (props) => {
           onChange={enterQtyHandler}
         ></input>
 
-        <button type="button">Add to list</button>
+        <button type="submit">Add to list</button>
       </form>
     </Card>
   );

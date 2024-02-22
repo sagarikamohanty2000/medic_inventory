@@ -1,0 +1,66 @@
+.rapper {
+    border-bottom: 2px solid rgb(169, 0, 0);
+}
+.body{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 1rem ;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+ .listDetails{
+     display: flex;
+    }
+   .itemName{
+    font-weight: bold;
+   }
+   .price{
+    font-weight: bold;
+    color: rgb(155, 41, 0);
+    margin-right: 3rem;
+    margin-top: 0.5rem;
+   }
+   .amount{
+    background-color:transparent;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    border-radius: 4px;
+    padding-left: 10px;
+    width: 2.5rem;
+    height: 1.8rem;
+    border: 1px solid rgb(164, 163, 163);
+
+   }
+    @media (min-width: 768px) {
+        .actions {
+          flex-direction: row;
+        }
+      }
+
+      .btnReduce {
+        background-color: transparent;
+        width: 40px;
+        height: 28px;
+        margin-right: 1rem;
+        border-radius: 4px;
+        font-size:larger;
+        color:  rgb(155, 41, 0);
+        
+      }
+      .btnAdd{
+        background-color: transparent;
+        width: 40px;
+        height: 28px;
+        border-radius: 4px;
+        font-size:larger;
+        color:  rgb(155, 41, 0);
+      }
+
+      .btnReduce:hover,
+      .btnReduce:active,
+      .btnAdd:hover,
+      .btnAdd:active{
+        background-color: #431400;
+        cursor: pointer;
+      }
