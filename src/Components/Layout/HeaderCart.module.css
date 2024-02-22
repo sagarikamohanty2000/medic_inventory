@@ -1,8 +1,9 @@
 
 .button{
     cursor: pointer;
-    background-color: rgb(72, 19, 19);
-    color:white;
+    background-color: rgb(247, 253, 255);
+    border: 1px #2d65c5 solid ;
+    color:black;
     width: 280px;
     border: none;
     height:55px ;
@@ -12,10 +13,7 @@
     padding: 15px 40px;
 }
 
-.button :hover,
-.button:active {
-    background-color: #2c0d00;
-}
+
 .cartIcon{
     width:25px;
     height:4px;
@@ -30,7 +28,7 @@
 }
 
 .badge{
-    background-color:  rgb(212, 39, 0);
+    background-color: #4f8fff;
     border-radius: 20px;
     padding: 4px  15px;
     font-weight: 600;
@@ -39,7 +37,7 @@
 
 .button:hover .badge,
 .button:active .badge {
-    background-color: #92320c;
+    background-color:#032a6f;
 }
 
 .bump {

@@ -47,12 +47,12 @@ const cartReducer = (state, action) => {
     let updatedItems = [...state.items];
 
     if (getItem) {
-      const updatedExistingItem = {
-        ...getItem,
-        amount: Number(getItem.amount) + Number(action.item.amount),
-        qty: Number(getItem.qty) - Number(action.item.amount),
-      };
-
+      
+        const  updatedExistingItem = {
+          ...getItem,
+          amount: Number(getItem.amount) + Number(action.item.amount),
+          qty: Number(getItem.qty) - Number(action.item.amount),
+        };
       updatedItems[getItemIndex] = updatedExistingItem;
     } else {
       updatedItems = state.items.concat(action.item);
@@ -74,11 +74,11 @@ const ContextProvide = (props) => {
   );
 
   const addItemToCart = (item) => {
-    dispatchCartItem({ type: "ADD", item: item});
+    dispatchCartItem({ type: "ADD", item: item });
   };
 
   const removeItemFromCart = (id) => {
-    dispatchCartItem({ type: "REMOVE", id: id});
+    dispatchCartItem({ type: "REMOVE", id: id });
   };
 
   const addItemToMedicList = (item) => {
@@ -86,7 +86,7 @@ const ContextProvide = (props) => {
   };
 
   const removeQuantity = (id) => {
-    dispatchMedicItem({ type: "REMOVE", id:id });
+    dispatchMedicItem({ type: "REMOVE", id: id });
   };
   const cartContext = {
     medicItems: medicState.items,
